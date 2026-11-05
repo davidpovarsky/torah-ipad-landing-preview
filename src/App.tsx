@@ -5,6 +5,9 @@ import BlurText from './components/BlurText'
 import ScrollFloat from './components/ScrollFloat'
 import SpotlightCard from './components/SpotlightCard'
 import { BorderBeam } from './components/ui/border-beam'
+import HorizontalJourney from './components/HorizontalJourney'
+import StoryCarousel from './components/StoryCarousel'
+import './immersive.css'
 
 const panels = [
   { tab: 'לימוד', title: 'הדף במרכז', lead: 'מקום שקט לקרוא, להתעמק ולחזור אל הסוגיה.', icon: BookOpen },
@@ -68,10 +71,10 @@ function Header() {
     <a className="brand" href="#top" aria-label="חזרה לראש העמוד"><span className="brand-symbol">ע</span><span>האייפד של הלומד</span></a>
     <nav className={'main-nav '+(menuOpen?'is-open':'')} aria-label="ניווט ראשי">
       <a href="#vision" onClick={()=>setMenuOpen(false)}>החזון</a>
-      <a href="#experience" onClick={()=>setMenuOpen(false)}>חוויית הלימוד</a>
+      <a href="#journey" onClick={()=>setMenuOpen(false)}>חוויית הלימוד</a>
       <a href="#audience" onClick={()=>setMenuOpen(false)}>למי זה מתאים</a>
     </nav>
-    <a className="header-cta" href="#experience">הצצה למוצר <ArrowUpLeft size={15}/></a>
+    <a className="header-cta" href="#journey">הצצה למוצר <ArrowUpLeft size={15}/></a>
     <button className="mobile-menu" type="button" aria-label="פתיחת תפריט" onClick={()=>setMenuOpen(!menuOpen)}>{menuOpen?<X/>:<Menu/>}</button>
   </header>
 }
@@ -92,7 +95,7 @@ function App() {
             <h1 id="hero-title"><span className="hero-small">כשהעולם של תורה</span><span className="hero-emphasis">פוגש אפשרויות<br/> חדשות.</span></h1>
             <BlurText text="אייפד שנועד להעניק ללומד מרחב של עיון, מחשבה וגילוי — בלי לוותר על התחושה של בית המדרש." animateBy="words" effect="blur" trigger="load" delay={40} blur={0} distance={10} stepDuration={0.35} className="hero-description"/>
             <div className="hero-actions">
-              <a className="button-primary" href="#experience">גלו את חוויית הלימוד <ArrowDownLeft size={18}/></a>
+              <a className="button-primary" href="#journey">גלו את חוויית הלימוד <ArrowDownLeft size={18}/></a>
               <a className="button-text" href="#vision">מה עומד מאחורי הרעיון <ArrowLeft size={16}/></a>
             </div>
             <div className="hero-footnote"><span className="fine-line"/><span>מחשבה מסורתית. חוויה עכשווית.</span></div>
@@ -125,7 +128,7 @@ function App() {
             <span className="mini-line"/>
             <h3>הטכנולוגיה בצד.<br/><em>התורה במרכז.</em></h3>
             <p>לא צריך לשנות את הדרך שבה לומדים כדי ליהנות מכלים חדשים. צריך לעצב אותם סביב הקשב, ההרגלים והצרכים האמיתיים של הלומד.</p>
-            <a className="inline-link" href="#experience">ראו את הרעיון בפעולה <ArrowLeft size={16}/></a>
+            <a className="inline-link" href="#journey">ראו את הרעיון בפעולה <ArrowLeft size={16}/></a>
           </div>
         </div>
       </section>
@@ -140,7 +143,7 @@ function App() {
               <p className="small-label">&#x5d4;&#x5e8;&#x5d2;&#x5e2; &#x5e9;&#x5d1;&#x5d5; &#x5d4;&#x5db;&#x5d5;&#x5dc; &#x5de;&#x5ea;&#x5d7;&#x5d1;&#x5e8;</p>
               <ScrollFloat effect="float" splitBy="words" textClassName="moment-title" scrollStart="top 96%" scrollEnd="bottom 58%" animationDuration={0.8}>&#x5e2;&#x5d5;&#x5dc;&#x5dd; &#x5e9;&#x5dc; &#x5e1;&#x5e4;&#x5e8;&#x5d9;&#x5dd;. &#x5d1;&#x5d9;&#x5d3;&#x5d9;&#x5d9;&#x5dd; &#x5e9;&#x5dc;&#x5da;.</ScrollFloat>
               <p>&#x5d4;&#x5d0;&#x5d5;&#x5d5;&#x5d9;&#x5e8;&#x5d4; &#x5e9;&#x5dc; &#x5d1;&#x5d9;&#x5ea; &#x5d4;&#x5de;&#x5d3;&#x5e8;&#x5e9;, &#x5d4;&#x5e2;&#x5d5;&#x5de;&#x5e7; &#x5e9;&#x5dc; &#x5d4;&#x5e1;&#x5e4;&#x5e8;&#x5d9;&#x5dd;, &#x5d5;&#x5d4;&#x5e0;&#x5d5;&#x5d7;&#x5d5;&#x5ea; &#x5e9;&#x5dc; &#x5db;&#x5dc;&#x5d9; &#x5d0;&#x5d7;&#x5d3; &#x5e9;&#x5de;&#x5d0;&#x5e4;&#x5e9;&#x5e8; &#x5dc;&#x5d4;&#x5de;&#x5e9;&#x5d9;&#x5da; &#x5d0;&#x5ea; &#x5d4;&#x5e2;&#x5d9;&#x5d5;&#x5df; &#x5d1;&#x5db;&#x5dc; &#x5de;&#x5e7;&#x5d5;&#x5dd;.</p>
-              <a className="inline-link" href="#experience">&#x5d2;&#x5dc;&#x5d5; &#x5d0;&#x5ea; &#x5d7;&#x5d5;&#x5d5;&#x5d9;&#x5d9;&#x5ea; &#x5d4;&#x5dc;&#x5d9;&#x5de;&#x5d5;&#x5d3; <ArrowLeft size={16}/></a>
+              <a className="inline-link" href="#journey">&#x5d2;&#x5dc;&#x5d5; &#x5d0;&#x5ea; &#x5d7;&#x5d5;&#x5d5;&#x5d9;&#x5d9;&#x5ea; &#x5d4;&#x5dc;&#x5d9;&#x5de;&#x5d5;&#x5d3; <ArrowLeft size={16}/></a>
               <span className="moment-caption">&#x5d4;&#x5d3;&#x5de;&#x5d9;&#x5d9;&#x5ea; &#x5e7;&#x5d5;&#x5e0;&#x5e1;&#x5e4;&#x5d8; &#x5dc;&#x5d4;&#x5de;&#x5d7;&#x5e9;&#x5d4; &#x5d1;&#x5dc;&#x5d1;&#x5d3;</span>
             </div>
           </div>
@@ -175,6 +178,7 @@ function App() {
 <section className="experience-section" id="experience"><div className="wrap"><div className="section-kicker">03 / לגלות מקרוב</div>
 </div></section>
 
+      <HorizontalJourney/>
       <section className="experience-stage" id="demo">
         <div className="wrap">
           <div className="section-kicker">04 / לגלות מקרוב</div>
@@ -196,9 +200,10 @@ function App() {
           </div>
         </div>
       </section>
+      <StoryCarousel/>
       <section className="audience-section" id="audience">
         <div className="wrap">
-          <div className="section-kicker">05 / למי זה מתאים</div>
+          <div className="section-kicker">07 / למי זה מתאים</div>
           <div className="audience-layout">
             <div className="audience-title"><p className="small-label">כי לכל לימוד יש קצב משלו</p><h2>לכל מי<br/>שרוצה <em>להעמיק.</em></h2><p>החזון מתחיל באדם שלומד: ברצון להבין, לברר, לקשר ולגלות.</p></div>
             <div className="audience-items">

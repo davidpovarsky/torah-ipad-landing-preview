@@ -20,3 +20,13 @@ Powered by the technologies that drive Zayit — https://zayitapp.com/
 React Bits: https://reactbits.dev/
 Magic UI: https://magicui.design/
 Any third-party library files keep their upstream terms. This is an unaffiliated concept, not an official Zayit product.
+
+## Immersive scrolling concept
+- Pinned horizontal chapter narrative: GSAP ScrollTrigger and @gsap/react, four conceptual experiences.
+- Responsive fallback: native RTL horizontal scrolling with snap points on touch devices or when reduced motion is preferred.
+- Interactive stories: Embla Carousel and its Autoplay plugin, five draggable RTL slides with accessible navigation.
+- Existing upstream components from React Bits (BlurText, ScrollFloat, LightRays and SpotlightCard) and Magic UI (BorderBeam).
+- The photographs and interface previews are conceptual illustrations; no product features or availability are promised.
+- All effects that move content are driven by these installed animation libraries; no new home-grown keyframe animations.
+
+Run `npm ci`, `npm run lint` and `npm run build` to verify the site.

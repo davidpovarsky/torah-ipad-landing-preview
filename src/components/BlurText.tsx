@@ -237,11 +237,11 @@ const BlurText = ({
 }: BlurTextProps) => {
   const ref = useRef<HTMLParagraphElement>(null);
   const [phase, setPhase] = useState<Phase>(() => startPhase(trigger));
-  const firstPhase = useRef(phase).current;
+  const [firstPhase] = useState<Phase>(phase);
   const [focusWord, setFocusWord] = useState(-1);
   const settledRef = useRef(phase === 'rest');
   const completeRef = useRef(onAnimationComplete);
-  completeRef.current = onAnimationComplete;
+  useEffect(() => { completeRef.current = onAnimationComplete; }, [onAnimationComplete]);
 
   const fx = useMemo(() => buildEffect(effect, direction, blur, distance), [effect, direction, blur, distance]);
 
@@ -294,12 +294,12 @@ const BlurText = ({
   useEffect(() => {
     if (phase !== 'from') return undefined;
     if (trigger === 'load') {
-      setPhase('in');
-      return undefined;
+      const frame = window.requestAnimationFrame(() => setPhase('in'));
+      return () => window.cancelAnimationFrame(frame);
     }
     if (trigger === 'hover' || trigger === 'click') {
-      setPhase('rest');
-      return undefined;
+      const frame = window.requestAnimationFrame(() => setPhase('rest'));
+      return () => window.cancelAnimationFrame(frame);
     }
     const element = ref.current;
     if (!element) return undefined;

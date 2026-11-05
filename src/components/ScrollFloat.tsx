@@ -131,7 +131,7 @@ const ScrollFloat: React.FC<ScrollFloatProps> = ({
 
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => { const frame = requestAnimationFrame(() => setMounted(true)); return () => cancelAnimationFrame(frame); }, []);
 
   useIsomorphicLayoutEffect(() => {
     const el = containerRef.current;

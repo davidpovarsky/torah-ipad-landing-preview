@@ -35,4 +35,5 @@ public/teiva/
 
 # Local visual QA outputs
 preview-*.png
+preview-*.jpg
 .chrome-qa*/
