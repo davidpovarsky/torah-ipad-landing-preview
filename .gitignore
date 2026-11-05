@@ -37,3 +37,5 @@ public/teiva/
 preview-*.png
 preview-*.jpg
 .chrome-qa*/
+
+visual-qa-report.json

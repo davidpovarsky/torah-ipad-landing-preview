@@ -9,49 +9,49 @@ import ScrollFloat from './ScrollFloat'
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 const chapters = [
-  { number: '01', label: 'הספרייה', title: 'כל המדפים. מרחב אחד.', description: 'הקסם של ספרייה עשירה, בלי לחפש מקום על השולחן. מתחילים בספר שרוצים — וממשיכים לאן שהלימוד לוקח.', Icon: LibraryBig, kind: 'library', note: 'ספרייה שמרגישה כמו בית מדרש' },
-  { number: '02', label: 'העיון', title: 'המקורות נפגשים על המסך.', description: 'דף מרכזי, פירוש לצידו, ומבט רחב שמאפשר להשוות ולהעמיק. לא עוד מעבר מתיש בין חלונות.', Icon: Layers3, kind: 'sources', note: 'כמה כיווני לימוד, מבט אחד' },
-  { number: '03', label: 'החיפוש', title: 'מרעיון קטן למחקר גדול.', description: 'מתחילים בביטוי, מגיעים למקורות, מסמנים מה חשוב ומגלים את ההקשרים. כך נראית סביבת עבודה שנבנתה סביב הלומד.', Icon: Search, kind: 'search', note: 'מוצאים את החוט שמחבר' },
-  { number: '04', label: 'ההמשכיות', title: 'אותו לימוד. בכל מקום.', description: 'על השולחן, בין סדר לסדר ובדרך. ההערות, הספרים והרעיונות נשארים חלק מחוויית לימוד אחת.', Icon: NotebookPen, kind: 'place', note: 'העיון ממשיך איתך' },
+  { number: '01', label: 'אוצריא · קורא וספרייה', title: 'כל הספרים. מול העיניים.', description: 'קורא עברי, ספרייה תורנית, ניווט וחיפוש. כאן אתם רואים צילום אמיתי של גרסת אוצריא על iPad.', Icon: LibraryBig, kind: 'library', note: 'צילום ממשק מגרסת בדיקה' },
+  { number: '02', label: 'Pinkha · כתיבה תורנית', title: 'חידוש. מאמר. מחקר.', description: 'סביבת כתיבה מבוססת Anytype, עם סוגי מסמכים נפרדים. קישור למקורות ברמת המסמך והבלוק מתפתח ונבדק.', Icon: NotebookPen, kind: 'sources', note: 'המחשה מבוססת המימוש והתכנון' },
+  { number: '03', label: 'Hanlin · סוכן AI', title: 'גם לשאלות יש מקום.', description: 'צ׳אט עם סוכן AI, כלים ו-Skills. היכולת לעבוד עם מקורות תורניים ועם אפליקציות נוספות נמצאת בשלבי פיתוח.', Icon: Search, kind: 'search', note: 'הדמיה של תהליך עבודה' },
+  { number: '04', label: 'האייפד של הלומד · החזון', title: 'לומדים. כותבים. ממשיכים.', description: 'שלוש אפליקציות עצמאיות שמתקרבות לסביבת לימוד אחת. שילובן ההדוק הוא יעד פיתוח — לא פונקציה שכבר הושלמה.', Icon: Layers3, kind: 'place', note: 'חזון המוצר הכולל' },
 ] as const
 
 function ConceptVisual({ kind }: { kind: typeof chapters[number]['kind'] }) {
   if (kind === 'library') return <div className="journey-photo">
-    <img src="./study-hall.jpg" alt="ספרייה תורנית, ספרים פתוחים ואייפד בסביבת בית מדרש" loading="lazy"/>
+    <img src="./product/otzaria-reader.webp" alt="צילום ממשק אוצריא אמיתי על iPad: קורא ספר ותוכן עניינים" loading="lazy"/>
     <div className="journey-photo-gradient"/>
-    <div className="journey-photo-insight"><BookOpen size={19}/><span>דף פתוח. מחשבה פתוחה.</span></div>
+    <div className="journey-photo-insight"><BookOpen size={19}/><span>אוצריא · צילום מסך אמיתי</span></div>
   </div>
   if (kind === 'sources') return <div className="journey-ui-visual">
     <div className="j-ui-top"><span className="j-ui-dot"/><span>סביבת עיון</span><span className="j-ui-top-label">הדמיית ממשק</span></div>
     <div className="j-ui-columns">
       <div className="j-ui-sheet j-ui-sheet-main">
-        <div className="j-ui-eyebrow">מסכת בבא מציעא</div><h4>אלו מציאות</h4><div className="j-ui-rule"/>
-        <p>שנים אוחזין בטלית, זה אומר אני מצאתיה וזה אומר אני מצאתיה.</p>
-        <p className="j-ui-highlight">זה אומר כולה שלי וזה אומר כולה שלי.</p>
-        <p>זה ישבע שאין לו בה פחות מחציה וזה ישבע שאין לו בה פחות מחציה.</p>
+        <div className="j-ui-eyebrow">Pinkha · מסמך כתיבה</div><h4>חידוש בסוגיה</h4><div className="j-ui-rule"/>
+        <p>סביבת כתיבה עם טקסטים ומקורות לעיון.</p>
+        <p className="j-ui-highlight">מהלך המחשבה מקבל מקום מסודר משלו.</p>
+        <p>אפשר להעמיק ולחזור אל נקודות הדיון.</p>
       </div>
       <div className="j-ui-sheet j-ui-sheet-side">
-        <div className="j-ui-eyebrow">עיון ומפרשים</div><h4>רש״י</h4><div className="j-ui-rule"/>
-        <p>ביאור הדברים על דרך הסוגיה, להרחבת העיון והבנת המקורות.</p>
-        <span className="j-ui-label">מקורות מקושרים</span>
+        <div className="j-ui-eyebrow">מקורות והקשרים</div><h4>מקורות +</h4><div className="j-ui-rule"/>
+        <p>קישור מקורות תורניים למסמכים נמצא בפיתוח ובבדיקה.</p>
+        <span className="j-ui-label">סוגי מסמכים</span>
         <div className="j-ui-result"><BookOpen size={15}/> תוספות</div><div className="j-ui-result"><BookOpen size={15}/> ראשונים</div>
       </div>
     </div>
-    <div className="j-ui-bottom"><span><Layers3 size={15}/> עיון מקביל</span><span>תצוגת קונספט להמחשה</span></div>
+    <div className="j-ui-bottom"><span><Layers3 size={15}/> כתיבה ומקורות</span><span>תצוגת קונספט להמחשה</span></div>
   </div>
   if (kind === 'search') return <div className="journey-search-visual">
     <div className="j-search-halo"/>
     <div className="j-search-panel">
-      <div className="j-search-query"><Search size={21}/><span>השבת אבידה</span><span className="j-search-hint">חיפוש בספרייה</span></div>
-      <div className="j-search-result"><span>01</span><div><strong>בבא מציעא</strong><p>סוגיות ומקורות יסוד הנוגעים להשבת אבידה</p></div><ArrowLeft size={17}/></div>
-      <div className="j-search-result"><span>02</span><div><strong>רמב״ם · הלכות גזלה ואבדה</strong><p>עיון בהלכות, מראי מקומות והקשרים</p></div><ArrowLeft size={17}/></div>
-      <div className="j-search-result"><span>03</span><div><strong>שולחן ערוך · חושן משפט</strong><p>המשך בירור ההלכה מתוך הספרים</p></div><ArrowLeft size={17}/></div>
-    </div><span className="j-search-disclaimer">הדמיית חיפוש רעיונית · אינה מחוברת למאגר חי</span>
+      <div className="j-search-query"><Search size={21}/><span>סכם את הנושא לחבורה</span><span className="j-search-hint">Hanlin AI</span></div>
+      <div className="j-search-result"><span>01</span><div><strong>ארגון השאלה</strong><p>מגדירים נושא והקשר ללימוד</p></div><ArrowLeft size={17}/></div>
+      <div className="j-search-result"><span>02</span><div><strong>כלים ו-Skills</strong><p>פעולות מתוך סביבת הסוכן</p></div><ArrowLeft size={17}/></div>
+      <div className="j-search-result"><span>03</span><div><strong>המשך העבודה</strong><p>תכנון העבודה מול מקורות והערות</p></div><ArrowLeft size={17}/></div>
+    </div><span className="j-search-disclaimer">הדמיה רעיונית · לא שיחת סוכן אמיתית</span>
   </div>
   return <div className="journey-photo journey-photo-place">
     <img src="./study-desk.jpg" alt="אייפד עם ספרים פתוחים ועט על שולחן לימוד" loading="lazy"/>
     <div className="journey-photo-gradient"/>
-    <div className="journey-photo-insight"><Sparkles size={18}/><span>ללמוד, להעמיק, להמשיך.</span></div>
+    <div className="journey-photo-insight"><Sparkles size={18}/><span>ללמוד. לכתוב. לחשוב.</span></div>
   </div>
 }
 

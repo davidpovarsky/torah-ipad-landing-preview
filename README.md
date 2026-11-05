@@ -30,3 +30,14 @@ Any third-party library files keep their upstream terms. This is an unaffiliated
 - All effects that move content are driven by these installed animation libraries; no new home-grown keyframe animations.
 
 Run `npm ci`, `npm run lint` and `npm run build` to verify the site.
+
+
+## Product-grounded Torah iPad concept (November 2026)
+This marketing preview is informed by three real development efforts:
+- **Otzaria / Maktabah:** real Hebrew iPad screenshots in `public/product/otzaria-*.webp`, optimized from a local iPad QA screenshot set. The screenshot is test-build evidence, not a production-release assertion.
+- **Pinkha × Anytype:** the website demonstrates the existing Anytype-based writing direction (חידוש, מאמר, מחקר) and labels source-linking work as under development. The Pinkha editor graphic is an illustrative mockup, not a screenshot.
+- **Hanlin AI:** agent chat, tools and Skills are represented through an illustrative conversation. The interaction and multi-app integration shown in marketing remain aspirational and are explicitly marked as such.
+
+The color system in `src/otzaria-theme.css` is based on the actual Otzaria Flutter project palette: `#2C1B02` (light-mode default dark brown), `#805610` (brown swatch), `#D7CCC8` (parchment), `#9C27B0` (dark-mode seed purple) and `#242424` (dark scaffold). Complementary editorial parchment/gold tones are used for contrast.
+
+No code from the source iPad apps is bundled into this marketing website. No signed build, complete integration, or release-ready status is claimed. The scroll-pinned story continues to use GSAP ScrollTrigger; the draggable story carousel uses Embla; the animated content switches use Motion and pre-existing component libraries. Keep marketing claims distinct from physical-device QA and release status.
