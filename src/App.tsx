@@ -117,7 +117,7 @@ function App() {
         </div>
         <div className="image-story wrap">
           <div className="story-visual">
-            <img src="/study-hall.jpg" alt="הדמיית אייפד לצד ספרים פתוחים על שולחן לימוד בבית מדרש" loading="lazy"/>
+            <img src="./study-hall.jpg" alt="הדמיית אייפד לצד ספרים פתוחים על שולחן לימוד בבית מדרש" loading="lazy"/>
             <div className="story-image-vignette"/>
             <span className="story-photo-label">המחשה חזותית · סביבת לימוד</span>
           </div>
@@ -134,7 +134,7 @@ function App() {
       <section className="moment-strip" aria-label="&#x5de;&#x5d1;&#x5d8; &#x5d0;&#x5dc; &#x5d7;&#x5d5;&#x5d5;&#x5d9;&#x5d9;&#x5ea; &#x5d4;&#x5dc;&#x5d9;&#x5de;&#x5d5;&#x5d3;">
         <div className="wrap">
           <div className="moment-frame">
-            <img src="/study-desk.jpg" alt="&#x5d0;&#x5d9;&#x5d9;&#x5e4;&#x5d3; &#x5e2;&#x5dc; &#x5e9;&#x5d5;&#x5dc;&#x5d7;&#x5df; &#x5dc;&#x5d9;&#x5de;&#x5d5;&#x5d3; &#x5dc;&#x5e6;&#x5d3; &#x5d2;&#x5de;&#x5e8;&#x5d0; &#x5e4;&#x5ea;&#x5d5;&#x5d7;&#x5d4;, &#x5e1;&#x5e4;&#x5e8;&#x5d9;&#x5dd; &#x5d5;&#x5e2;&#x5d8;" loading="lazy" decoding="async"/>
+            <img src="./study-desk.jpg" alt="&#x5d0;&#x5d9;&#x5d9;&#x5e4;&#x5d3; &#x5e2;&#x5dc; &#x5e9;&#x5d5;&#x5dc;&#x5d7;&#x5df; &#x5dc;&#x5d9;&#x5de;&#x5d5;&#x5d3; &#x5dc;&#x5e6;&#x5d3; &#x5d2;&#x5de;&#x5e8;&#x5d0; &#x5e4;&#x5ea;&#x5d5;&#x5d7;&#x5d4;, &#x5e1;&#x5e4;&#x5e8;&#x5d9;&#x5dd; &#x5d5;&#x5e2;&#x5d8;" loading="lazy" decoding="async"/>
             <div className="moment-shade" aria-hidden="true"/>
             <div className="moment-copy">
               <p className="small-label">&#x5d4;&#x5e8;&#x5d2;&#x5e2; &#x5e9;&#x5d1;&#x5d5; &#x5d4;&#x5db;&#x5d5;&#x5dc; &#x5de;&#x5ea;&#x5d7;&#x5d1;&#x5e8;</p>
