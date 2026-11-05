@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+:root{font-family:'Heebo',Arial,sans-serif;color:#f3ece0;background:#0c0b0b;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:320px;background:#0c0b0b}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+button,a{outline-offset:5px}
+button{cursor:pointer}
+::selection{background:#b59464;color:#100e0b}
+.site{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,#0b0a0b 0%,#11100f 55%,#0b0a0b 100%);color:#f3eee5}
+.wrap{width:min(1260px,calc(100% - 88px));margin-inline:auto}
+.noise-overlay{position:absolute;inset:0;pointer-events:none;z-index:2;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E")}
+.topbar{position:absolute;top:0;left:0;right:0;z-index:50;height:90px;display:flex;align-items:center;justify-content:space-between;padding:0 max(44px,calc((100vw - 1260px)/2));border-bottom:1px solid #ffffff13;backdrop-filter:blur(22px);background:#08080866}
+.brand{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:16px;white-space:nowrap;letter-spacing:-.03em}
+.brand-symbol{display:grid;place-items:center;width:38px;height:38px;border:1px solid #b9955e99;border-radius:12px;font-family:'Frank Ruhl Libre',serif;color:#e3c38a;font-size:26px;background:linear-gradient(140deg,#d4af741c,#10100e)}
+.main-nav{display:flex;align-items:center;gap:36px;color:#ada79c;font-size:14px}
+.main-nav a:hover{color:#ead4ae}
+.header-cta{display:inline-flex;align-items:center;gap:12px;border:1px solid #c1a57777;padding:12px 20px;border-radius:50px;color:#ead4b2;font-size:14px;background:#c19c6d12}
+.mobile-menu{display:none;background:transparent;border:0;color:#eee}
+.hero{min-height:880px;position:relative;display:flex;align-items:center;padding-top:105px;background:radial-gradient(ellipse at 80% 48%,#71522b24 0%,transparent 48%),linear-gradient(180deg,#121012,#080808);overflow:hidden}
+.hero:after{content:'';position:absolute;inset:auto 0 0;height:150px;background:linear-gradient(0deg,#0e0c0c,transparent);pointer-events:none;z-index:1}
+.hero-light{position:absolute;z-index:0;inset:-2% -10% 0 -10%;opacity:.75;pointer-events:none;mix-blend-mode:screen}
+.hero-grid{position:relative;z-index:5;display:grid;grid-template-columns:43% 57%;align-items:center;gap:12px;min-height:730px}
+.hero-copy{padding:5px 0 85px 0;position:relative;z-index:6}
+.eyebrow,.small-label,.section-kicker{color:#d0ad75;font-size:13px;letter-spacing:.08em;font-weight:500}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:29px}
+.eyebrow-mark{height:7px;width:7px;background:#ceae7e;box-shadow:0 0 16px #dabb85;transform:rotate(45deg)}
+.hero h1{font-weight:400;font-size:clamp(45px,4.6vw,75px);line-height:1.18;letter-spacing:-.045em;margin:0 0 26px}
+.hero-small{font-size:.58em;font-weight:400;display:block;color:#eee5da;letter-spacing:-.025em;margin-bottom:17px}
+.hero-emphasis{font-family:'Frank Ruhl Libre',serif;font-size:1.05em;font-weight:500;display:block;color:#e4c18b;line-height:1.13;text-shadow:0 5px 65px #cc9c3a24}
+.hero-description{font-size:17px!important;line-height:2!important;color:#c2b9ae!important;max-width:420px;display:block!important}
+.hero-actions{display:flex;align-items:center;gap:24px;margin-top:37px;flex-wrap:wrap}
+.button-primary{border-radius:50px;padding:16px 26px;background:linear-gradient(117deg,#d8b780,#b99360);color:#1d150d;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:13px;box-shadow:0 12px 45px #a07e4236}
+.button-text{display:inline-flex;align-items:center;gap:9px;color:#ded1bf;font-size:14px}
+.button-text:hover,.inline-link:hover{color:#f3d39d}
+.hero-footnote{display:flex;align-items:center;gap:14px;color:#928a7e;font-size:12px;margin-top:57px}
+.fine-line{height:1px;width:34px;background:#a48b64}
+.hero-product{height:655px;position:relative;display:grid;place-items:center}
+.hero-halo{position:absolute;width:690px;height:560px;left:50%;top:47%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,#b484493c 0%,#6a45271e 38%,transparent 72%);filter:blur(24px)}
+.hero-device{position:absolute;top:143px;left:26px;width:min(730px,110%);transform:perspective(1100px) rotateY(7deg) rotateX(7deg) rotateZ(-4deg);filter:drop-shadow(0 40px 75px #000d)}
+.device{position:relative;display:block;padding:13px 13px 14px;border-radius:32px;background:linear-gradient(130deg,#626970,#141518 22%,#2b2e30 74%,#686867);box-shadow:inset 0 1px 1px #bbb6aa77,0 3px 0 #090909,0 30px 100px #000c;aspect-ratio:1.48;border:1px solid #7a7c7877;overflow:hidden}
+.device:after{content:'';position:absolute;inset:3px;border:1px solid #ffffff1b;border-radius:30px;pointer-events:none}
+.device-camera{position:absolute;z-index:4;width:5px;height:5px;border-radius:50%;background:#0a131a;left:6px;top:50%;box-shadow:inset 0 0 0 1px #43505b}
+.study-os{width:100%;height:100%;border-radius:21px;background:#f6f0e7;color:#2e281f;overflow:hidden;border:2px solid #080909;display:flex;flex-direction:column}
+.study-status{height:22px;background:#f3ecdf;display:flex;align-items:center;justify-content:space-between;font-size:10px;font-weight:700;padding:1px 20px;direction:ltr;color:#453e30}
+.os-mini{font-size:8px;letter-spacing:2px}
+.study-toolbar{height:49px;display:flex;align-items:center;justify-content:space-between;padding:0 21px;background:#e9dfce;border-bottom:1px solid #c4b9a5}
+.study-toolbar-brand{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700}
+.os-logo{width:25px;height:25px;background:#5d543e;border-radius:8px;color:#fff0d2;display:grid;place-items:center;font-family:'Frank Ruhl Libre';font-size:18px}
+.os-toolbar-actions{display:flex;align-items:center;gap:20px;color:#746c5a}
+.study-layout{display:grid;grid-template-columns:24% 1fr;min-height:0;height:calc(100% - 71px)}
+.study-sidebar{position:relative;padding:20px 10px 15px 8px;background:#f2ebdf;border-left:1px solid #e4dbcc}
+.study-sidebar-label{font-size:10px;color:#9b8c75;padding:2px 9px 17px}
+.study-side-row{padding:10px 8px;border-radius:7px;display:flex;gap:9px;font-size:10px;color:#716758;align-items:center;white-space:nowrap}
+.study-side-row.selected{background:#ddd0b7;color:#4f402b;font-weight:700}
+.study-side-bottom{display:flex;gap:7px;align-items:center;font-size:9px;color:#9e907a;position:absolute;bottom:17px;right:12px}
+.green-dot{height:5px;width:5px;border-radius:50%;background:#8da77e}
+.study-content{position:relative;min-width:0;padding:18px 7% 16px;background:#f9f5eb;overflow:hidden}
+.study-breadcrumb{display:flex;gap:4px;align-items:center;color:#a09073;font-size:9px}
+.study-doc-head{display:flex;justify-content:space-between;align-items:end;margin:20px 0 11px}
+.study-doc-head span{font-family:'Frank Ruhl Libre',serif;font-size:25px;font-weight:700}
+.study-doc-head small{font-size:9px;color:#ae9975}
+.study-rule{height:1px;background:#bcaa89}
+.gemara-text{font-family:'Frank Ruhl Libre',serif;font-size:clamp(10px,1vw,17px);line-height:1.9;text-align:justify;color:#1f1b17;margin:16px 0}
+.gemara-text p{margin:0 0 13px}
+.passage-highlight{background:#f1e1b5;padding:5px}
+.study-bottom-bar{position:absolute;bottom:0;left:0;right:0;height:38px;background:#f5eddc;border-top:1px solid #e5d9c4;display:flex;align-items:center;gap:15px;padding:0 22px;color:#80745f}
+.study-bottom-bar span{margin-right:auto;color:#b0a48f;font-size:8px}
+.study-note{background:#fffdf7;border:1px solid #e1d7c6;padding:22px 24px;margin:25px 0;border-radius:8px;box-shadow:0 4px 20px #d4c5a334}
+.study-note h4{margin:9px 0;color:#4d3920;font-family:'Frank Ruhl Libre';font-size:22px}
+.study-note p{font-size:11px;line-height:1.8}
+.note-label{font-size:10px;color:#997b4e}
+.note-rule{height:1px;background:#e2d7c3;margin:18px 0}
+.note-rule.short{width:60%}
+.source-pop{position:absolute;bottom:60px;left:16px;border:1px solid #dccba9;background:#fffaf1;box-shadow:0 8px 30px #0002;border-radius:11px;padding:12px 15px;display:grid;gap:7px}
+.source-pop span{font-size:9px;color:#96856b}
+.source-pop strong{font-size:11px}
+.hero-tile{position:absolute;z-index:9;display:flex;gap:12px;align-items:center;padding:12px 17px;border:1px solid #d9ba8955;border-radius:16px;background:#211c18de;backdrop-filter:blur(26px);box-shadow:0 19px 50px #0008;color:#d6b782}
+.hero-tile div{display:grid;gap:4px}
+.hero-tile b{font-weight:500;color:#f1e3ca;font-size:13px}
+.hero-tile small{color:#a8a094;font-size:11px}
+.hero-tile-one{top:90px;left:15px}
+.hero-tile-two{bottom:72px;right:8px}
+.product-caption{position:absolute;bottom:20px;left:14px;color:#857b6b;font-size:11px}
+.scroll-cue{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);z-index:5;color:#9f9480;display:flex;gap:12px;align-items:center;font-size:11px}
+.vision-section{padding:100px 0 110px;position:relative;background:#11100f}
+.section-kicker{font-size:12px;letter-spacing:.15em;font-weight:400;max-width:1260px;width:min(1260px,calc(100% - 88px));margin:0 auto 45px;color:#ab8a58}
+.vision-copy{text-align:center;max-width:950px;margin:0 auto 112px}
+.vision-copy .small-label{display:block;margin:0 0 20px}
+.vision-title{font-family:'Frank Ruhl Libre',serif;font-size:clamp(43px,5.3vw,83px);line-height:1.18;letter-spacing:-.034em;font-weight:500;color:#f0ddbe}
+.vision-description{max-width:660px;margin:34px auto 0;font-size:17px;line-height:2;color:#b6ab9c;font-weight:300}
+.image-story{display:grid;grid-template-columns:1.2fr 1fr;gap:0;align-items:center;min-height:450px;border:1px solid #c4a16a22;background:#191612;border-radius:24px;overflow:hidden}
+.story-visual{position:relative;height:100%;min-height:450px;overflow:hidden;background:radial-gradient(ellipse at 70% 30%,#786042,#17120d)}
+.story-visual img{width:100%;height:100%;object-fit:cover;object-position:75% center;position:absolute;inset:0}
+.story-image-vignette{position:absolute;inset:0;background:linear-gradient(90deg,#181410 0%,transparent 30%),linear-gradient(0deg,#15110a9c,transparent 50%);pointer-events:none}
+.story-photo-label{position:absolute;left:25px;bottom:23px;font-size:11px;color:#eed9b9a8}
+.story-copy{padding:52px 65px 55px 35px}
+.mini-line{display:block;height:2px;width:45px;background:#bc9966;margin-bottom:30px}
+.story-copy h3{font-size:clamp(32px,3vw,51px);line-height:1.25;font-weight:400;letter-spacing:-.02em;margin:0 0 25px}
+.story-copy h3 em,.audience-title h2 em,.final-inner h2 em{font-family:'Frank Ruhl Libre';font-weight:500;color:#d8b681;font-style:normal}
+.story-copy p{color:#b6aa99;line-height:2.1;font-size:15px}
+.inline-link{display:inline-flex;gap:9px;align-items:center;color:#d7b67d;margin-top:17px;font-size:14px}
+.features-section{padding:85px 0 135px;background:linear-gradient(#11100f,#14110f)}
+.section-heading-row{display:flex;align-items:end;justify-content:space-between;gap:45px;margin-bottom:55px}
+.section-heading-row h2,.experience-intro h2,.audience-title h2{font-size:clamp(39px,4.2vw,67px);font-weight:400;line-height:1.25;letter-spacing:-.03em;margin:8px 0 0}
+.section-heading-row h2 span,.experience-intro h2 span{color:#cba977;font-family:'Frank Ruhl Libre';font-weight:500}
+.section-heading-row>p{color:#aca092;line-height:1.9;font-size:14px;max-width:320px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature-card{position:relative!important;min-height:334px!important;border:1px solid #8b714f55!important;border-radius:19px!important;background:#201b18bb!important;padding:33px 28px!important;overflow:hidden}
+.feature-no{font-size:12px;color:#927a57;position:absolute;top:34px;left:29px}
+.feature-icon{height:50px;width:50px;border:1px solid #b59a6866;border-radius:14px;background:#d5a97116;color:#dbbd8d;display:grid;place-items:center;margin-bottom:30px}
+.feature-card h3{margin:0 0 12px;font-size:25px;font-weight:500;color:#f2e3d2}
+.feature-card p{color:#b5a89a;line-height:1.9;font-size:14px;margin:0;max-width:290px}
+.feature-decoration{position:absolute;left:27px;bottom:25px;display:flex;align-items:center;gap:10px;color:#9f8868;opacity:.8}
+.feature-decoration svg{width:18px;height:18px}
+.feature-decoration span{font-size:11px;border:1px solid #705b40;border-radius:6px;padding:7px 10px;color:#d2b38a}
+.features-disclaimer{font-size:11px;color:#777069;margin-top:20px}
+.experience-section{display:none}
+.experience-stage{padding:125px 0;background:radial-gradient(ellipse at 20% 40%,#49301b3b,transparent 55%),#0e0d0d}
+.experience-intro{text-align:center;margin-bottom:47px}
+.experience-intro h2{font-size:clamp(40px,4.8vw,71px)}
+.experience-intro p:last-child{font-size:14px;color:#b1a79a;margin-top:20px}
+.showcase-shell{position:relative;background:linear-gradient(135deg,#1d1a17,#131210 60%,#1e1b18);border:1px solid #b8955b65;border-radius:27px;overflow:hidden;box-shadow:0 20px 75px #0008}
+.showcase-menu{height:85px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #ffffff16;gap:12px}
+.showcase-tab{display:flex;align-items:center;gap:8px;padding:11px 25px;border:1px solid transparent;border-radius:99px;color:#a99c8a;background:transparent;font-size:13px}
+.showcase-tab.active{border-color:#ad895a66;background:#bd92521d;color:#f1d3a6}
+.showcase-grid{display:grid;grid-template-columns:31% 69%;min-height:445px;align-items:center;gap:0}
+.showcase-copy{padding:50px 55px}
+.showcase-count{color:#ae9266;font-size:12px;letter-spacing:.12em;margin-bottom:38px}
+.showcase-copy h3{font-family:'Frank Ruhl Libre';font-size:43px;font-weight:500;color:#efdbb7;margin:0 0 18px}
+.showcase-copy p{font-size:15px;color:#b8ad9c;line-height:2}
+.showcase-caption{margin-top:75px;display:flex;gap:8px;align-items:center;color:#8e8171;font-size:11px}
+.caption-dot{height:6px;width:6px;background:#bda070;border-radius:50%}
+.showcase-device{padding:50px 55px 0 20px;margin-bottom:-80px;filter:drop-shadow(0 24px 35px #0008)}
+.device-small{border-radius:25px;padding:11px 12px;min-width:400px}
+.device-small .study-os{border-radius:15px}
+.audience-section{padding:120px 0 135px;background:#141210}
+.audience-layout{display:grid;grid-template-columns:45% 55%;gap:55px;align-items:start}
+.audience-title h2{font-family:'Frank Ruhl Libre';font-size:clamp(45px,5vw,76px)}
+.audience-title>p:last-child{color:#a99b88;line-height:2;font-size:15px;max-width:360px;margin-top:28px}
+.audience-items{border-top:1px solid #b9a07c44}
+.audience-item{display:grid;grid-template-columns:48px 1fr 22px;gap:16px;align-items:center;border-bottom:1px solid #b9a07c44;padding:29px 0}
+.audience-item>span{display:grid;place-items:center;width:39px;height:39px;border-radius:50%;border:1px solid #b8976755;color:#dfbc89;font-family:'Frank Ruhl Libre';font-size:22px}
+.audience-item h3{font-size:20px;font-weight:400;margin:0 0 8px}
+.audience-item p{font-size:13px;color:#9b8f7e;margin:0}
+.audience-item>svg{color:#9b7c51}
+.final-section{position:relative;min-height:690px;padding:110px 0;background:linear-gradient(180deg,#11100f,#0b0a0b);overflow:hidden;display:grid;place-items:center}
+.final-light{position:absolute;inset:0;pointer-events:none;opacity:.52}
+.final-inner{position:relative;z-index:2;text-align:center}
+.final-symbol{width:76px;height:76px;display:grid;place-items:center;margin:0 auto 32px;border-radius:24px;color:#dfbc83;border:1px solid #c9a66d77;background:#a5815020;font-family:'Frank Ruhl Libre';font-size:54px}
+.final-inner h2{font-weight:400;font-size:clamp(42px,5.7vw,80px);line-height:1.3;margin:18px 0 21px}
+.final-inner>p:not(.small-label){font-size:16px;color:#b0a493;margin-bottom:38px}
+.final-inner .button-primary{margin:0 auto}
+.footer{background:#090909;border-top:1px solid #8f795122;padding:35px 0}
+.footer-row{display:flex;align-items:center;gap:16px;justify-content:space-between;font-size:11px;color:#897e6d;flex-wrap:wrap}
+.footer-row a{color:#af9165}
+@media(max-width:1020px){
+.wrap,.section-kicker{width:min(100% - 48px,1260px)}
+.topbar{padding:0 24px}
+.hero{min-height:780px}
+.hero-grid{grid-template-columns:45% 55%}
+.hero h1{font-size:52px}
+.hero-device{width:650px;left:-80px;top:170px}
+.hero-tile-one{left:-40px}
+.hero-tile-two{right:0}
+.story-copy{padding:42px}
+.image-story{grid-template-columns:1fr 1fr}
+.showcase-grid{grid-template-columns:36% 64%}
+.showcase-copy{padding:28px}
+.showcase-device{padding:30px 24px 0 15px}
+}
+@media(max-width:720px){
+.wrap,.section-kicker{width:calc(100% - 38px)}
+.topbar{height:70px;padding:0 19px}
+.brand{font-size:13px}
+.brand-symbol{width:32px;height:32px}
+.header-cta{display:none}
+.mobile-menu{display:block}
+.main-nav{display:none;position:absolute;top:70px;left:0;right:0;background:#17130f;border-bottom:1px solid #b9955e44;padding:22px;gap:15px;align-items:stretch}
+.main-nav.is-open{display:flex;flex-direction:column}
+.hero{padding-top:95px;min-height:auto}
+.hero-grid{display:flex;flex-direction:column;gap:0;min-height:auto}
+.hero-copy{padding:35px 0 0;align-self:stretch}
+.hero h1{font-size:clamp(43px,9vw,63px)}
+.hero-description{font-size:15px!important;line-height:1.9!important}
+.eyebrow{margin-bottom:20px}
+.hero-actions{gap:19px;margin-top:30px}
+.button-primary{padding:14px 20px}
+.hero-footnote{margin-top:30px}
+.hero-product{width:100%;height:390px}
+.hero-halo{width:470px;height:360px}
+.hero-device{width:500px;left:50%;top:72px;transform:translateX(-50%) perspective(1000px) rotateY(6deg) rotateX(6deg) rotateZ(-3deg)}
+.hero-tile{padding:8px 10px;border-radius:12px}
+.hero-tile b{font-size:11px}
+.hero-tile small{font-size:9px}
+.hero-tile-one{top:48px;left:0}
+.hero-tile-two{bottom:34px;right:0}
+.product-caption{bottom:6px}
+.scroll-cue{display:none}
+.vision-section,.features-section,.experience-stage,.audience-section{padding:75px 0}
+.section-kicker{margin-bottom:35px}
+.vision-copy{margin-bottom:48px}
+.vision-title{font-size:clamp(37px,8vw,54px)}
+.vision-description{font-size:15px;padding:0 8px}
+.image-story{grid-template-columns:1fr}
+.story-visual{min-height:275px;order:1}
+.story-copy{padding:30px 24px 40px;order:2}
+.story-copy h3{font-size:36px}
+.section-heading-row{display:block;margin-bottom:35px}
+.section-heading-row>p{margin-top:21px}
+.features-grid{grid-template-columns:1fr}
+.feature-card{min-height:285px!important}
+.experience-intro h2{font-size:44px}
+.showcase-menu{height:72px;gap:1px}
+.showcase-tab{padding:9px 12px}
+.showcase-grid{display:flex;flex-direction:column}
+.showcase-copy{width:100%;padding:28px 23px 12px}
+.showcase-copy h3{font-size:34px}
+.showcase-count{margin-bottom:15px}
+.showcase-caption{margin-top:15px}
+.showcase-device{width:100%;padding:26px 15px 0;margin-bottom:-34px}
+.device-small{min-width:0;width:100%}
+.audience-layout{display:block}
+.audience-items{margin-top:37px}
+.audience-item{grid-template-columns:41px 1fr 20px;gap:12px}
+.audience-item h3{font-size:17px}
+.final-section{min-height:590px;padding:85px 0}
+.final-inner h2{font-size:46px}
+.footer-row{flex-direction:column;text-align:center}
+.study-status{height:15px;font-size:7px}
+.study-toolbar{height:31px;padding:0 12px}
+.study-toolbar-brand{font-size:9px}
+.study-toolbar-brand .os-logo{width:18px;height:18px;font-size:12px}
+.study-layout{height:calc(100% - 46px)}
+.study-sidebar{padding:7px 3px}
+.study-sidebar-label{font-size:6px;padding:0 4px 7px}
+.study-side-row{font-size:7px;padding:5px 3px;gap:3px}
+.study-side-row svg{width:9px;height:9px}
+.study-side-bottom{font-size:6px;bottom:8px;right:5px}
+.study-content{padding:10px 6%}
+.study-breadcrumb{font-size:6px}
+.study-doc-head{margin:8px 0}
+.study-doc-head span{font-size:17px}
+.study-doc-head small{font-size:7px}
+.gemara-text{font-size:9px;line-height:1.6;margin-top:8px}
+.study-bottom-bar{height:23px;gap:10px;padding:0 12px}
+.study-bottom-bar svg{width:10px}
+.study-bottom-bar span{font-size:6px}
+}
+@media(max-width:410px){.hero-device{width:435px}.hero-product{height:345px}.hero h1{font-size:40px}.hero-tile-two{bottom:20px}.study-os{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
