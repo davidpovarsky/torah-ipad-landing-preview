@@ -90,7 +90,7 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow"><span className="eyebrow-mark"/> רעיון חדש לעולם הלימוד</div>
             <h1 id="hero-title"><span className="hero-small">כשהעולם של תורה</span><span className="hero-emphasis">פוגש אפשרויות<br/> חדשות.</span></h1>
-            <BlurText text="אייפד שנועד להעניק ללומד מרחב של עיון, מחשבה וגילוי — בלי לוותר על התחושה של בית המדרש." animateBy="words" effect="blur" trigger="load" delay={95} stepDuration={0.65} className="hero-description"/>
+            <BlurText text="אייפד שנועד להעניק ללומד מרחב של עיון, מחשבה וגילוי — בלי לוותר על התחושה של בית המדרש." animateBy="words" effect="blur" trigger="load" delay={40} blur={0} distance={10} stepDuration={0.35} className="hero-description"/>
             <div className="hero-actions">
               <a className="button-primary" href="#experience">גלו את חוויית הלימוד <ArrowDownLeft size={18}/></a>
               <a className="button-text" href="#vision">מה עומד מאחורי הרעיון <ArrowLeft size={16}/></a>
