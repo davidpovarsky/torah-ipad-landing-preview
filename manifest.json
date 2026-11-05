@@ -1,15 +1,15 @@
 {
-  "name": "Zayit - Jewish Study Library",
-  "short_name": "Zayit",
-  "description": "A free desktop library of Jewish texts: Torah, Talmud, Midrash, Halacha and commentaries.",
-  "start_url": "/",
-  "scope": "/",
+  "name": "האייפד של הלומד — תצוגת קונספט",
+  "short_name": "האייפד של הלומד",
+  "description": "תצוגת קונספט לסביבת לימוד תורנית עם אוצריא, Pinkha ו־Hanlin AI. שלבי פיתוח ובדיקה.",
+  "start_url": "/torah-ipad-landing-preview/",
+  "scope": "/torah-ipad-landing-preview/",
   "display": "standalone",
-  "background_color": "#faf8f5",
-  "theme_color": "#8b7355",
+  "background_color": "#2C1B02",
+  "theme_color": "#2C1B02",
   "orientation": "any",
-  "lang": "en",
-  "dir": "auto",
+  "lang": "he",
+  "dir": "rtl",
   "categories": [
     "education",
     "books",
@@ -17,38 +17,22 @@
   ],
   "icons": [
     {
-      "src": "/favicon-96x96.png",
+      "src": "./favicon-96x96.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/apple-touch-icon.png",
+      "src": "./apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/icon.png",
+      "src": "./icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/art/HOME-DARK.jpg",
-      "sizes": "1600x1000",
-      "type": "image/jpeg",
-      "form_factor": "wide",
-      "label": "Home screen - Dark theme"
-    },
-    {
-      "src": "/art/HOME-LIGHT.jpg",
-      "sizes": "1600x1000",
-      "type": "image/jpeg",
-      "form_factor": "wide",
-      "label": "Home screen - Light theme"
     }
   ]
 }
